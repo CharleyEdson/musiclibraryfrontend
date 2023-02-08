@@ -11,13 +11,13 @@ function App() {
 },[])
 
   async function getAllSongs(){
-    let response = await axios.get('http://127.0.0.1:8000/api/music/');
+    let response = await axios.get('https://cors-everywhere-me.herokuapp.com/http://18-env.eba-eyvv9mzh.us-west-1.elasticbeanstalk.com/api/music/');
     setSongs(response.data);
   }
   
   async function AddNewMusic(newSong){
 
-    let response = await axios.post('http://127.0.0.1:8000/api/music/',newSong);
+    let response = await axios.post('https://cors-everywhere-me.herokuapp.com/http://18-env.eba-eyvv9mzh.us-west-1.elasticbeanstalk.com/api/music/',newSong);
     if (response.status === 201) {
       getAllSongs()
     }
